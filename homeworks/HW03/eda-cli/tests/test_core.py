@@ -59,3 +59,22 @@ def test_correlation_and_top_categories():
     city_table = top_cats["city"]
     assert "value" in city_table.columns
     assert len(city_table) <= 2
+
+def test_quality_flags_constant_and_high_cardinality():
+    n = 10
+    df = pd.DataFrame(
+        {
+            "const_col": [1] * n,                          # константная колонка
+            "cat_col": [f"cat_{i}" for i in range(n)],     # 10 уникальных категорий
+            "num": list(range(n)),                         # просто числовая колонка
+        }
+    )
+
+    missing_df = missing_table(df)
+    summary = summarize_dataset(df)
+    flags = compute_quality_flags(summary, missing_df)
+
+    assert flags["has_constant_columns"] is True
+    assert flags["has_high_cardinality_categoricals"] is True
+
+    assert flags["quality_score"] < 1.0
