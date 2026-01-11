@@ -1,0 +1,28 @@
+{
+  "ds1": {
+    "dataset_file": "S07-hw-dataset-01.csv",
+    "best_method": "KMeans",
+    "best_params": {
+      "k": 2
+    },
+    "selection_criterion": "max silhouette (DBSCAN evaluated on non-noise; DBSCAN discarded if noise_share>0.5)"
+  },
+  "ds2": {
+    "dataset_file": "S07-hw-dataset-02.csv",
+    "best_method": "DBSCAN",
+    "best_params": {
+      "eps": 0.9,
+      "min_samples": 20
+    },
+    "selection_criterion": "max silhouette (DBSCAN evaluated on non-noise; DBSCAN discarded if noise_share>0.5)"
+  },
+  "ds3": {
+    "dataset_file": "S07-hw-dataset-03.csv",
+    "best_method": "Agglomerative",
+    "best_params": {
+      "k": 2,
+      "linkage": "average"
+    },
+    "selection_criterion": "max silhouette (DBSCAN evaluated on non-noise; DBSCAN discarded if noise_share>0.5)"
+  }
+}
