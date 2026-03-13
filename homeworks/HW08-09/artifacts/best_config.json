@@ -1,0 +1,11 @@
+{
+    "experiment_id": "E4",
+    "dataset": "EMNIST",
+    "seed": 42,
+    "architecture": "Flatten -> Linear(784,256) -> BatchNorm1d -> ReLU -> Linear(256,128) -> BatchNorm1d -> ReLU -> Linear(128,47)",
+    "optimizer": "Adam",
+    "lr": 0.001,
+    "epochs_trained": 13,
+    "early_stopping_patience": 3,
+    "test_accuracy": 0.8443617021276596
+}
