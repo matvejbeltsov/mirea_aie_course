@@ -1,0 +1,1 @@
+{"architecture": "GRU", "window_size": 14, "hidden_size": 64, "batch_size": 32, "lr": 0.001, "seed": 42, "scaler": "StandardScaler"}

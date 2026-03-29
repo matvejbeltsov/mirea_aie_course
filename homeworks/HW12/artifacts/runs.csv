@@ -1,0 +1,5 @@
+experiment_id,task,dataset,seed,split_summary,window_size,horizon,model_summary,features_summary,scaler,optimizer,lr,epochs_trained,best_val_mae,best_val_rmse,best_val_mape,test_mae,test_rmse,test_mape,notes
+B1,forecasting,S12,42,70/15/15,,1,Naive last,"lags, rolling, calendar",StandardScaler,,,,6.444814814814815,8.20102295260389,0.0439792166354992,,,,Naive last
+B2,forecasting,S12,42,70/15/15,,1,MA 7,"lags, rolling, calendar",StandardScaler,,,,12.702012786596118,15.217644526713752,0.0881686403093607,,,,MA 7
+B3,forecasting,S12,42,70/15/15,,1,Ridge on lags,"lags, rolling, calendar",StandardScaler,,,,7.188729774210055,8.73228185697505,0.04796688920293986,,,,Ridge on lags
+R1,forecasting,S12,42,70/15/15,14.0,1,GRU 64 units,raw sequence,StandardScaler,Adam,0.001,50.0,5.872535558273363,7.453189909595587,0.03971445582076291,6.599508705018823,8.240293335877263,0.04293935608509455,Best GRU
