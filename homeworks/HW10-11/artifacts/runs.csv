@@ -1,0 +1,7 @@
+experiment_id,task,dataset,seed,model_summary,optimizer,lr,epochs_trained,best_val_accuracy,test_accuracy,precision,recall,mean_iou,notes
+C1,classification,STL10,42,simple-cnn-base,Adam,0.001,5.0,0.56,,,,,simple-cnn-base
+C2,classification,STL10,42,simple-cnn-aug,Adam,0.001,5.0,0.541,,,,,simple-cnn-aug
+C3,classification,STL10,42,resnet18-head-only,Adam,0.001,5.0,0.935,,,,,resnet18-head-only
+C4,classification,STL10,42,resnet18-finetune,Adam,0.001,5.0,0.917,0.91875,,,,resnet18-finetune
+V1,segmentation,OxfordIIITPet,42,fcn_resnet50,,,,,,,,0.7609162309896185,Raw argmax mask
+V2,segmentation,OxfordIIITPet,42,fcn_resnet50,,,,,,,,0.7611100798752847,Morphological opening

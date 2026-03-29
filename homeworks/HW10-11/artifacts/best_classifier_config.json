@@ -1,0 +1,10 @@
+{
+    "dataset": "STL10",
+    "architecture": "resnet18",
+    "finetune_strategy": "layer4 + fc",
+    "transforms": "ResNet18_Weights.DEFAULT.transforms()",
+    "batch_size": 64,
+    "epochs": 5,
+    "lr": 0.001,
+    "seed": 42
+}
